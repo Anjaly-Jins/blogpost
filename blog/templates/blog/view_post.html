@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'blog/view.css' %}">
+
+<div class="post-container">
+    <h2 class="post-title">{{ post.title }}</h2>
+    <p class="post-meta">By {{ post.author }} • {{ post.updated_at|date:"M d, Y" }}</p>
+
+    {% if post.image %}
+        <img src="{{ post.image.url }}" class="post-image">
+    {% endif %}
+
+    <p class="post-content">{{ post.content }}</p>
+
+    <div class="action-buttons">
+        <a href="{% url 'edit_post' post.id %}" class="btn edit-btn">Edit</a>
+        <a href="{% url 'delete_post' post.id %}" class="btn delete-btn">Delete</a>
+        <a href="{% url 'index' %}" class="btn back-btn">Back</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'blog/add.css' %}">
+
+<h2 class="form-title">Add New Blog Post</h2>
+
+<form method="post" enctype="multipart/form-data" class="form-box">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn submit-btn">Create Post</button>
+    <a href="{% url 'index' %}" class="btn cancel-btn">Cancel</a>
+</form>
+
+{% endblock %}

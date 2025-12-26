@@ -1,0 +1,26 @@
+.post-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.post-title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.action-buttons .btn {
+    margin-right: 10px;
+    padding: 10px 16px;
+}
+
+.edit-btn { background: #2196f3; }
+.delete-btn { background: #f44336; }
+.back-btn { background: #757575; }

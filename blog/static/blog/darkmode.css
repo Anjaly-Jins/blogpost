@@ -1,0 +1,16 @@
+body.dark {
+    background: #121212;
+    color: #e5e5e5;
+}
+
+body.dark .navbar {
+    background: #1c1c1c;
+}
+
+body.dark a {
+    color: #e5e5e5;
+}
+
+body.dark .floating-btn {
+    background: #63d96c;
+}
